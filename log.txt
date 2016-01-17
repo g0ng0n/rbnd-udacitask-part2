@@ -1,3 +1,21 @@
+commit 6e8ba11930bdb7dc84c6f89b55a3a32287e1a2f2
+Author: Gonzalo Gisbert <gonzalo.a.gisbert@gmail.com>
+Date:   Sun Jan 17 16:57:57 2016 -0300
+
+    added the create pdf functionality, this feature is only available for the todo and event Item Types
+
+commit f327a645b520eb8868255047f1cf8a8f7030e354
+Author: Gonzalo Gisbert <gonzalo.a.gisbert@gmail.com>
+Date:   Sun Jan 17 01:32:44 2016 -0300
+
+    added colors to the arrows with the colorize gem
+
+commit eb83cf6d0a4b43f470e0c4f263b6be6f3b80f26f
+Author: Gonzalo Gisbert <gonzalo.a.gisbert@gmail.com>
+Date:   Sun Jan 17 01:28:16 2016 -0300
+
+    added the latest log.txt file
+
 commit 5b84914d43d565e13f6fc2bdb13567f40c92b515
 Author: Gonzalo Gisbert <gonzalo.a.gisbert@gmail.com>
 Date:   Sun Jan 17 01:27:49 2016 -0300
