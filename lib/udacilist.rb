@@ -1,5 +1,6 @@
 class UdaciList
-  include UdaciListErrors, Printable
+  include Loggeable, UdaciListErrors, Printable
+
 
   attr_reader :title, :items
 
@@ -21,7 +22,7 @@ class UdaciList
         raise UdaciListErrors::InvalidItemType
       end
    rescue Exception => e
-     throw_error(e,type: type)
+     logger.error(retrieve_error(e,type: type))
    end
   end
 
@@ -33,31 +34,24 @@ class UdaciList
         raise UdaciListErrors::IndexExceedsListSize
       end
     rescue Exception => e
-        throw_error(e, index: index)
+        logger.error(retrieve_error(e, index: index))
     end
   end
 
-  def line_parser(number)
-    puts "-" * number
-  end
 
   def all
-
-      line_parser(@title.length)
-      puts @title
-      line_parser(@title.length)
-
+    print_msg(@title)
     @items.each_with_index do |item, position|
       begin
         puts "#{position + 1}) #{item.details}"
       rescue Exception => e
-        throw_error(e)
+        logger.error(retrieve_error(e))
       end
     end
   end
 
   def print_filter(filter)
-    puts "Filter Feature"
+    print_msg("Filter Feature")
     result = type_filter(filter)
     begin
       if !result.empty?
@@ -68,7 +62,7 @@ class UdaciList
         raise "#{UdaciListErrors::NoItemsInList} There are no #{filter} Items"
       end
     rescue Exception => e
-      throw_error(e)
+      logger.error(retrieve_error(e))
     end
   end
 
@@ -81,6 +75,17 @@ class UdaciList
       res = []
       @items.find_all { |item| res.push(item) if item.type.eql?(filter) }
       return res
+    end
+
+
+    def line_parser(number)
+      puts "-" * number
+    end
+
+    def print_msg(msg)
+      line_parser(msg.length)
+      puts msg
+      line_parser(msg.length)
     end
 
 end

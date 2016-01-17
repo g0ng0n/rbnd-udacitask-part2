@@ -4,7 +4,7 @@ module Printable
 
     filename="#{title}.pdf"
     if File.file?(filename)
-      puts "The file Already Exists Deleting it"
+      logger.info "The file #{filename} Already Exists Deleting it"
       FileUtils.rm(filename)
     end
     render_pdf(filename, list)
@@ -34,7 +34,7 @@ module Printable
             details = item.details_array
             data.push(details)
           rescue Exception => e
-            throw_error(e)
+            logger.error(retrieve_error(e))
           end
       end
     end
