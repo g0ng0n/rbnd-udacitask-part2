@@ -1,10 +1,10 @@
 class UdaciList
-  include UdaciListErrors
+  include UdaciListErrors, Printable
 
   attr_reader :title, :items
 
   def initialize(options={})
-    @title = options[:title]
+    @title = options[:title] ? options[:title] : "Untitled List"
     @items = []
   end
   def add(type, description, options={})
@@ -42,15 +42,11 @@ class UdaciList
   end
 
   def all
-    if @title
+
       line_parser(@title.length)
       puts @title
       line_parser(@title.length)
-    else
-      line_parser("Untitled List".length)
-      puts "Untitled List"
-      line_parser("Untitled List".length)
-    end
+
     @items.each_with_index do |item, position|
       begin
         puts "#{position + 1}) #{item.details}"
@@ -60,16 +56,31 @@ class UdaciList
     end
   end
 
-  def filter(filter)
+  def print_filter(filter)
     puts "Filter Feature"
-    result =[]
-    result = @items.find_all { |item| result.push(item) if item.type.eql?(filter) }
-    if !result.empty?
-      result.each_with_index do |item, position|
-          puts "#{position + 1}) #{item.details}"
+    result = type_filter(filter)
+    begin
+      if !result.empty?
+        result.each_with_index do |item, position|
+            puts "#{position + 1}) #{item.details}"
+        end
+      else
+        raise "#{UdaciListErrors::NoItemsInList} There are no #{filter} Items"
       end
-    else
-      puts "There are no #{filter} Items"
+    rescue Exception => e
+      throw_error(e)
     end
   end
+
+  def create_pdf
+    Pdf_generator(@title,type_filter("todo").concat(type_filter("event")))
+  end
+
+  private
+    def type_filter(filter)
+      res = []
+      @items.find_all { |item| res.push(item) if item.type.eql?(filter) }
+      return res
+    end
+
 end

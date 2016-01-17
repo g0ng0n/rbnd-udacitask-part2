@@ -14,4 +14,11 @@ class EventItem < Item
     format_text(@type,10) + format_text(@description,25) + "event dates: " + format_date(start_date: @start_date, end_date: @end_date)
   end
 
+  def details_array
+    details = []
+    details.push(format_text(@type,10))
+    details.push(format_text(@description,25))
+    details.push(format_date(start_date: @start_date, end_date: @end_date))
+    return details
+  end
 end

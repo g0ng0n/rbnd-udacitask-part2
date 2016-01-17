@@ -19,4 +19,13 @@ class TodoItem < Item
     details << priority if !priority.nil?
   end
 
+  def details_array
+    details = []
+    details.push(format_text(@type,10))
+    details.push(format_text(@description,25))
+    details.push(format_date(due_date: @due))
+    details.push(validate_priority(priority)) if !priority.nil?
+    return details
+  end
+
 end

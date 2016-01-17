@@ -1,7 +1,13 @@
 require 'chronic'
 require 'colorize'
+require 'prawn'
+require 'prawn/table'
+
 # Find a third gem of your choice and add it to your project
 require 'date'
+require 'fileutils'
+
+require_relative "lib/tools"
 
 require_relative "lib/item"
 require_relative "lib/errors"
@@ -46,4 +52,5 @@ new_list.all
 
 # DEMO FILTER BY ITEM TYPE
 # ------------------------
-new_list.filter("event")
+new_list.print_filter("event")
+new_list.create_pdf

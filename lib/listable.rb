@@ -24,8 +24,16 @@ module Listable
 
     end
 
-    def format_priority(priority)
+    def validate_priority(priority)
+      if priority.eql?("high") || priority.eql?("medium") || priority.eql?("low")
+        return priority
+      else
+        raise "#{UdaciListErrors::InvalidPriorityValue} '#{priority}' is an Invalid Priority"
+      end
+    end
 
+    def format_priority(priority)
+      validate_priority(priority)
       case priority
       when "high"
         value = " ⇧".colorize(:red)
@@ -33,8 +41,6 @@ module Listable
         value = " ⇨".colorize(:light_yellow)
       when "low"
         value = " ⇩".colorize(:light_magenta)
-      else
-        raise "#{UdaciListErrors::InvalidPriorityValue} '#{priority}' is an Invalid Priority"
       end
 
       return value

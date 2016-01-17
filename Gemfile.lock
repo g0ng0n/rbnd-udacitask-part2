@@ -3,6 +3,13 @@ GEM
   specs:
     chronic (0.10.2)
     colorize (0.7.7)
+    pdf-core (0.6.0)
+    prawn (2.0.2)
+      pdf-core (~> 0.6.0)
+      ttfunk (~> 1.4.0)
+    prawn-table (0.2.2)
+      prawn (>= 1.3.0, < 3.0.0)
+    ttfunk (1.4.0)
 
 PLATFORMS
   ruby
@@ -10,6 +17,8 @@ PLATFORMS
 DEPENDENCIES
   chronic
   colorize
+  prawn
+  prawn-table
 
 BUNDLED WITH
    1.11.2

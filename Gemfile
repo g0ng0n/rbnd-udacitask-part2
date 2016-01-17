@@ -4,3 +4,7 @@ source 'https://rubygems.org'
 gem 'colorize'
 #Chronic is a natural language date/time parser written in pure Ruby.
 gem 'chronic'
+
+
+gem 'prawn'
+gem 'prawn-table'
