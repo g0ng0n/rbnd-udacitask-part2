@@ -1,3 +1,21 @@
+commit 7e38851aa2eee61fd6faabd8482e9116816d38e2
+Author: Gonzalo Gisbert <gonzalo.a.gisbert@gmail.com>
+Date:   Sun Jan 17 01:14:24 2016 -0300
+
+    added the filter feature
+
+commit 99eb7186de4c41c2802dd1d499ac230ac2a13784
+Author: Gonzalo Gisbert <gonzalo.a.gisbert@gmail.com>
+Date:   Sun Jan 17 01:00:56 2016 -0300
+
+    added the errors features
+
+commit 8fcd54fb87b72945bf86f857109db898d5176ffc
+Author: Gonzalo Gisbert <gonzalo.a.gisbert@gmail.com>
+Date:   Sat Jan 16 23:29:57 2016 -0300
+
+     added the latest log.txt file
+
 commit fc14936ad82d0485895cd09c390f11814ff32a79
 Author: Gonzalo Gisbert <gonzalo.a.gisbert@gmail.com>
 Date:   Sat Jan 16 23:29:37 2016 -0300
