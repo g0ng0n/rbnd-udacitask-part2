@@ -59,4 +59,12 @@ class UdaciList
       end
     end
   end
+
+  def filter(filter)
+    puts "Filter Feature"
+    @items.find_all { |item| result.push(item) if item.type.eql?(filter) }.each_with_index do |item, position|
+        puts "#{position + 1}) #{item.details}"
+    end
+
+  end
 end

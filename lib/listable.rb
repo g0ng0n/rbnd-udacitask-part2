@@ -34,7 +34,7 @@ module Listable
       when "low"
         value = " ⇩"
       else
-        raise UdaciListErrors::InvalidPriorityValue
+        raise "#{UdaciListErrors::InvalidPriorityValue} '#{priority}' is an Invalid Priority"
       end
 
       return value
