@@ -1,12 +1,15 @@
 module Listable
     # Listable methods go here
-    def format_description(description, ljust_prop)
-      "#{@description}".ljust(ljust_prop)
+    #this is the old format_description, I refactored by sending the text
+    # I want to format, so I can use the same method but with the Type
+    def format_text(text, ljust_prop)
+      "#{text}".ljust(ljust_prop)
     end
+
 
     def format_date(params={})
 
-      if params.include?(:start_date)
+      if params[:start_date]
         dates = params[:start_date].strftime("%D")
         if params[:end_date]
            dates << " -- " + params[:end_date].strftime("%D")
