@@ -1,3 +1,15 @@
+commit 9afa7d45c9b2280114baf3e2dac5503ca6605f4c
+Author: Gonzalo Gisbert <gonzalo.a.gisbert@gmail.com>
+Date:   Sat Jan 16 23:00:30 2016 -0300
+
+    added the GemFile, and other features into the app like the errors modules
+
+commit 338b81cb752c8a9faabc51ce0adc5a9ccf80c101
+Author: Gonzalo Gisbert <gonzalo.a.gisbert@gmail.com>
+Date:   Sat Jan 16 22:40:48 2016 -0300
+
+    added the latest log.txt file
+
 commit b8f1ac6555d342353b4f5406f3ecd8f7b824b24d
 Author: Gonzalo Gisbert <gonzalo.a.gisbert@gmail.com>
 Date:   Sat Jan 16 22:40:22 2016 -0300
