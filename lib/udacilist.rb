@@ -1,4 +1,6 @@
 class UdaciList
+  include UdaciListErrors
+
   attr_reader :title, :items
 
   def initialize(options={})
@@ -6,14 +8,33 @@ class UdaciList
     @items = []
   end
   def add(type, description, options={})
-    type = type.downcase
-    @items.push TodoItem.new(type,description, options) if type == "todo"
-    @items.push EventItem.new(type,description, options) if type == "event"
-    @items.push LinkItem.new(type,description, options) if type == "link"
+    begin
+      type = type.downcase
+      case type
+      when "todo"
+        @items.push TodoItem.new(type,description, options)
+      when "event"
+        @items.push EventItem.new(type,description, options)
+      when "link"
+        @items.push LinkItem.new(type,description, options)
+      else
+        raise UdaciListErrors::InvalidItemType
+      end
+   rescue Exception => e
+     throw_error(e,type: type)
+   end
   end
 
   def delete(index)
-    @items.delete_at(index - 1)
+    begin
+      if @items.length > index
+        @items.delete_at(index - 1)
+      else
+        raise UdaciListErrors::IndexExceedsListSize
+      end
+    rescue Exception => e
+        throw_error(e, index: index)
+    end
   end
 
   def line_parser(number)
@@ -31,7 +52,11 @@ class UdaciList
       line_parser("Untitled List".length)
     end
     @items.each_with_index do |item, position|
-      puts "#{position + 1}) #{item.details}"
+      begin
+        puts "#{position + 1}) #{item.details}"
+      rescue Exception => e
+        throw_error(e)
+      end
     end
   end
 end

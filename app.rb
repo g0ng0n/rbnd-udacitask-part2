@@ -4,8 +4,8 @@ require 'colorize'
 require 'date'
 
 require_relative "lib/item"
-require_relative "lib/listable"
 require_relative "lib/errors"
+require_relative "lib/listable"
 require_relative "lib/udacilist"
 require_relative "lib/todo"
 require_relative "lib/event"
@@ -36,9 +36,9 @@ new_list.add("link", "http://ruby-doc.org")
 
 # SHOULD RETURN ERROR MESSAGES
 # ----------------------------
-# new_list.add("image", "http://ruby-doc.org") # Throws InvalidItemType error
-# new_list.delete(9) # Throws an IndexExceedsListSize error
-# new_list.add("todo", "Hack some portals", priority: "super high") # throws an InvalidPriorityValue error
+new_list.add("image", "http://ruby-doc.org") # Throws InvalidItemType error
+new_list.delete(9) # Throws an IndexExceedsListSize error
+new_list.add("todo", "Hack some portals", priority: "super high") # throws an InvalidPriorityValue error
 
 # DISPLAY UNTITLED LIST
 # ---------------------

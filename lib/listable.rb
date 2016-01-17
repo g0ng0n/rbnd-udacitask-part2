@@ -1,4 +1,5 @@
 module Listable
+    include UdaciListErrors
     # Listable methods go here
     #this is the old format_description, I refactored by sending the text
     # I want to format, so I can use the same method but with the Type
@@ -24,10 +25,18 @@ module Listable
     end
 
     def format_priority(priority)
-      value = " ⇧" if priority == "high"
-      value = " ⇨" if priority == "medium"
-      value = " ⇩" if priority == "low"
-      value = "" if !priority
+
+      case priority
+      when "high"
+        value = " ⇧"
+      when "medium"
+        value = " ⇨"
+      when "low"
+        value = " ⇩"
+      else
+        raise UdaciListErrors::InvalidPriorityValue
+      end
+
       return value
     end
 
