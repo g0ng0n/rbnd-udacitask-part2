@@ -1,3 +1,15 @@
+commit bcf01cbfa20c4cc1ebeb7e53c102eb0daea35795
+Author: gonzalo gisbert <gonzalo.a.gisbert@gmail.com>
+Date:   Sun Jan 17 17:54:05 2016 -0300
+
+    added the logging feature, all of the logs are going to be written in the udacityListLog.log file
+
+commit 7e1c35296788f2bb79ad198c1069bb6ab7647cff
+Author: Gonzalo Gisbert <gonzalo.a.gisbert@gmail.com>
+Date:   Sun Jan 17 16:59:23 2016 -0300
+
+    added the latest log.txt file
+
 commit 6e8ba11930bdb7dc84c6f89b55a3a32287e1a2f2
 Author: Gonzalo Gisbert <gonzalo.a.gisbert@gmail.com>
 Date:   Sun Jan 17 16:57:57 2016 -0300

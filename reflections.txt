@@ -18,6 +18,18 @@
 3. What two additional features did you build? Why?
   I think changing priority levels and using a gem in an innovate way is a good feature
   to implement and also for learning purpose.
+  -->Update:
+  I added two features to the app
+    1- the generate pdf functionality: for this I used the gems prawn and prawn-table, those
+    gems helped me to generate a pdf with a table inside with the Items. This is only for
+    the Event and Todo Items, so I used the filter functionality in order to filter out The
+    Link Item types.
+    2- The logging feature: for this feature I created a loggeable module and inside I required the logger class
+    from the Ruby standard library to create the logger instance variable and then I included the module inside the
+    UdaciList class for logging purpose.
+
+    Also the pdf file and the log file, when you re run the program those files will be deleted if exists before their creation
+    using the FileUtils Module
 
 4. Where do you still have room to grow?
   I had to improve in the errors throws, and see how ruby works in its core with this.

@@ -9,7 +9,7 @@ module Loggeable
   # Global, memoized, lazy initialized instance of a logger
   def self.logger
 
-    @logger ||= create_log_file("udacityLog.log")
+    @logger ||= create_log_file("udacityListLog.log")
   end
 
   def self.create_log_file(filename)
