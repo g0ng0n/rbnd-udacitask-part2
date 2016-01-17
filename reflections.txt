@@ -2,12 +2,24 @@
 # -------------------------------------------------------
 1. What is the gem of your choice and how did you use it?
 2. Describe the 2 features you added to the project.
-  a) Feature 1...
-  b) Feature 2...
+  a) Using your third gem in an interesting way (to be implemented)
+  b) Change the priority levels of items ( to be implemented)
 
 # REFLECTIONS
 # -------------------------------------------------------
 1. How long did you spend working on this project?
+  I'm still working on it, But for this first part I spent like 3 hours and half
+
 2. What was the most rewarding challenge you conquered?
+  I had some troubles with the errors throws and
+  I had to spend a lot of time researching about this topic
+  So I guess that's the most rewarding challenge
+
 3. What two additional features did you build? Why?
+  I think changing priority levels and using a gem in an innovate way is a good feature
+  to implement and also for learning purpose.
+
 4. Where do you still have room to grow?
+  I had to improve in the errors throws, and see how ruby works in its core with this.
+  Also I'll try to read some code of the rubygems
+  that I'm going to use to learn how to craft good quality code

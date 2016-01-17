@@ -62,9 +62,14 @@ class UdaciList
 
   def filter(filter)
     puts "Filter Feature"
-    @items.find_all { |item| result.push(item) if item.type.eql?(filter) }.each_with_index do |item, position|
-        puts "#{position + 1}) #{item.details}"
+    result =[]
+    result = @items.find_all { |item| result.push(item) if item.type.eql?(filter) }
+    if !result.empty?
+      result.each_with_index do |item, position|
+          puts "#{position + 1}) #{item.details}"
+      end
+    else
+      puts "There are no #{filter} Items"
     end
-
   end
 end
