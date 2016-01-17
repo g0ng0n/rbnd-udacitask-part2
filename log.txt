@@ -1,3 +1,15 @@
+commit b8f1ac6555d342353b4f5406f3ecd8f7b824b24d
+Author: Gonzalo Gisbert <gonzalo.a.gisbert@gmail.com>
+Date:   Sat Jan 16 22:40:22 2016 -0300
+
+    added to the listable.rb file the format_date and format_priority features
+
+commit 194e2673783a2ebdfa2c21fca9bf633d593f57ca
+Author: Gonzalo Gisbert <gonzalo.a.gisbert@gmail.com>
+Date:   Sat Jan 16 22:10:58 2016 -0300
+
+    added the latest log.txt file
+
 commit 24a91c0b822a3607e1a3ba75f5a5efd1cbcfaff6
 Author: Gonzalo Gisbert <gonzalo.a.gisbert@gmail.com>
 Date:   Sat Jan 16 22:10:43 2016 -0300
