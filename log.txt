@@ -1,3 +1,15 @@
+commit 5b84914d43d565e13f6fc2bdb13567f40c92b515
+Author: Gonzalo Gisbert <gonzalo.a.gisbert@gmail.com>
+Date:   Sun Jan 17 01:27:49 2016 -0300
+
+    added the reflections.txt file
+
+commit f4eafee1e7bd30b822432f3799db33091bc05bb7
+Author: Gonzalo Gisbert <gonzalo.a.gisbert@gmail.com>
+Date:   Sun Jan 17 01:16:29 2016 -0300
+
+    added the lastest log.txt file
+
 commit 66c561abdb86cb559204b59880a82601c90f0192
 Author: Gonzalo Gisbert <gonzalo.a.gisbert@gmail.com>
 Date:   Sun Jan 17 01:14:42 2016 -0300
