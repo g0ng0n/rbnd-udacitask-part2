@@ -28,11 +28,11 @@ module Listable
 
       case priority
       when "high"
-        value = " ⇧"
+        value = " ⇧".colorize(:red)
       when "medium"
-        value = " ⇨"
+        value = " ⇨".colorize(:light_yellow)
       when "low"
-        value = " ⇩"
+        value = " ⇩".colorize(:light_magenta)
       else
         raise "#{UdaciListErrors::InvalidPriorityValue} '#{priority}' is an Invalid Priority"
       end
