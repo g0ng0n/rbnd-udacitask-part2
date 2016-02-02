@@ -1,3 +1,9 @@
+commit 6df7f5342da1a9ab59eaee5005c2cba8d3a6e6fe
+Author: gonzalo gisbert <gonzalo.a.gisbert@gmail.com>
+Date:   Sun Jan 17 18:04:57 2016 -0300
+
+    edited the reflections.txt file and added the latest log.txt file
+
 commit bcf01cbfa20c4cc1ebeb7e53c102eb0daea35795
 Author: gonzalo gisbert <gonzalo.a.gisbert@gmail.com>
 Date:   Sun Jan 17 17:54:05 2016 -0300
